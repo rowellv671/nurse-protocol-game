@@ -227,7 +227,13 @@ const questionBank = [
   }
 ];
 
-const defaultLeaders = [];
+const defaultLeaders: {
+  name: string;
+  score: number;
+  totalQuestions?: number;
+  time: number;
+  session?: string;
+}[] = [];
 
 function makeSessionCode() {
   return Math.random().toString(36).slice(2, 8).toUpperCase();
