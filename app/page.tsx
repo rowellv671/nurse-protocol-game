@@ -264,7 +264,7 @@ export default function NurseProtocolGame() {
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(180);
+  const [timeLeft, setTimeLeft] = useState(480);
   const [finished, setFinished] = useState(false);
   const [leaderboard, setLeaderboard] = useState(defaultLeaders);
   const [firebaseStatus, setFirebaseStatus] = useState(firebaseReady ? "Connecting to Firebase..." : "Firebase not configured yet");
@@ -483,7 +483,7 @@ export default function NurseProtocolGame() {
                   <Card className="rounded-2xl border-dashed">
                     <CardContent className="p-4">
                       <p className="text-sm text-slate-500">Timer</p>
-                      <p className="mt-1 font-semibold">3 minutes</p>
+                      <p className="mt-1 font-semibold">8 minutes</p>
                     </CardContent>
                   </Card>
                 </div>
