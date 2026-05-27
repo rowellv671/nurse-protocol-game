@@ -321,8 +321,7 @@ export default function NurseProtocolGame() {
   const data = doc.data() as Omit<LeaderboardEntry, "id">;
   return { id: doc.id, ...data };
 });
-setLeaderboard(rows);
-        setLeaderboard(rows as LeaderboardEntry[]);
+setLeaderboard(rows as LeaderboardEntry[]);
         setFirebaseStatus("Live leaderboard connected");
       },
       () => {
