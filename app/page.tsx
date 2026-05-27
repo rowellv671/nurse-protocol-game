@@ -227,13 +227,18 @@ const questionBank = [
   }
 ];
 
-const defaultLeaders: {
+type LeaderboardEntry = {
+  id?: string;
   name: string;
   score: number;
   totalQuestions?: number;
   time: number;
   session?: string;
-}[] = [];
+  sessionCode?: string;
+  completedAt?: unknown;
+};
+
+const defaultLeaders: LeaderboardEntry[] = [];
 
 function makeSessionCode() {
   return Math.random().toString(36).slice(2, 8).toUpperCase();
