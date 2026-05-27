@@ -317,8 +317,7 @@ export default function NurseProtocolGame() {
     const unsubscribe = onSnapshot(
       scoresQuery,
       (snapshot) => {
-        const rows: LeaderboardEntry[] = snapshot.docs.map((doc) => {
-  const data = doc.data() as Omit<LeaderboardEntry, "id">;
+        const rows = snapshot.docs.map((doc) => ({ id: doc.id, ...(doc.data() as Omit<LeaderboardEntry, "id">) })) as LeaderboardEntry[];
   return {
     id: doc.id,
     ...data
