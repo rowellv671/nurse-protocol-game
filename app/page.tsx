@@ -318,7 +318,7 @@ export default function NurseProtocolGame() {
       scoresQuery,
       (snapshot) => {
        const rows = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })) as LeaderboardEntry[];
-        setLeaderboard(rows);
+        setLeaderboard(rows as LeaderboardEntry[]);
         setFirebaseStatus("Live leaderboard connected");
       },
       () => {
