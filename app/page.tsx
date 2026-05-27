@@ -258,7 +258,7 @@ function shuffleArray<T>(items: T[]): T[] {
   return [...items].sort(() => Math.random() - 0.5);
 }
 
-function getPerformanceLabel(score, total) {
+function getPerformanceLabel(score: number, total: number): string {
   const pct = Math.round((score / total) * 100);
   if (pct >= 90) return "Excellent";
   if (pct >= 75) return "Good";
